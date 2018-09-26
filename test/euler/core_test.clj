@@ -7,7 +7,8 @@
             [euler.problems.problem-005 :refer :all]
             [euler.problems.problem-006 :refer :all]
             [euler.problems.problem-007 :refer :all]
-            [euler.problems.problem-008 :refer :all]))
+            [euler.problems.problem-008 :refer :all]
+            [euler.problems.problem-009 :refer :all]))
 
 (deftest fast-running-solutions
   (is (= 233168 (solution-001)))
@@ -16,5 +17,8 @@
   (is (= 906609 (solution-004)))
   (is (= 232792560 (solution-005)))
   (is (= 25164150 (solution-006)))
-  (is (= 104743 (solution-007)))
-  (is (= 23514624000 (solution-008))))
+  (is (= 23514624000 (solution-008)))
+  (is (= 31875000 (solution-009))))
+
+(deftest slow-running-solutions
+  (is (= 104743 (solution-007))))
