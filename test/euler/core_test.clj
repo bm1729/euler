@@ -1,7 +1,8 @@
 (ns euler.core-test
   (:require [clojure.test :refer :all]
-            [euler.core :refer :all]))
+            [euler.problems.problem-001 :refer :all]
+            [euler.problems.problem-002 :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest fast-running-solutions
+  (is (= 233168 (solution-001)))
+  (is (= 4613732 (solution-002))))
