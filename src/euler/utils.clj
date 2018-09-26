@@ -1,5 +1,9 @@
 (ns euler.utils)
 
 (defn divides?
-  [x y]
-  (zero? (mod x y)))
+  [num div]
+  (zero? (mod num div)))
+
+(defn power
+  [x n]
+  (reduce * (repeat n x)))
