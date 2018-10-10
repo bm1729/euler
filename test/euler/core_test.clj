@@ -11,7 +11,8 @@
              [problem-008 :refer :all]
              [problem-009 :refer :all]
              [problem-010 :refer :all]
-             [problem-011 :refer :all]]))
+             [problem-011 :refer :all]
+             [problem-012 :refer :all]]))
 
 (deftest fast-running-solutions
   (is (= 233168 (solution-001)))
