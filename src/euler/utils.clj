@@ -7,3 +7,7 @@
 (defn power
   [x n]
   (reduce * (repeat n x)))
+
+(defn square
+  [n]
+  (* n n))
