@@ -12,7 +12,8 @@
              [problem-009 :refer :all]
              [problem-010 :refer :all]
              [problem-011 :refer :all]
-             [problem-012 :refer :all]]))
+             [problem-012 :refer :all]
+             [problem-013 :refer :all]]))
 
 (defmacro euler
   [expected solution-fn]
@@ -30,9 +31,9 @@
 (euler 906609 solution-004)
 (euler 232792560 solution-005)
 (euler 25164150 solution-006)
+(euler 104743 solution-007)
 (euler 23514624000 solution-008)
 (euler 31875000 solution-009)
-(euler 70600674 solution-011)
-
-(euler 104743 solution-007)
 (euler 142913828922 solution-010)
+(euler 70600674 solution-011)
+(euler "5537376230" solution-013)

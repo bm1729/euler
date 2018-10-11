@@ -1,7 +1,7 @@
 (ns euler.problems.problem-010
   (:require [euler.utils :refer :all]))
 
-(defn sieve-of-eratosthenes
+(defn- sieve-of-eratosthenes
   [n]
   (let [n+1 (inc n)
         n-over-2 (/ n 2)]
