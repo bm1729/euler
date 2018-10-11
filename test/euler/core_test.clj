@@ -14,6 +14,8 @@
              [problem-011 :refer :all]
              [problem-012 :refer :all]]))
 
+(println "Hello")
+
 (deftest fast-running-solutions
   (is (= 233168 (solution-001)))
   (is (= 4613732 (solution-002)))
