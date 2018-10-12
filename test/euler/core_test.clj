@@ -24,7 +24,7 @@
          (is (= ~expected (~solution-fn)))
          (let [time-taken-ns# (- (. java.lang.System (nanoTime)) start-ns#)
                time-taken-ms# (/ time-taken-ns# 1000.0 1000.0)]
-           (printf "%s: %.3f ms\n" ~(str solution-fn) time-taken-ms#)
+           (printf "%s: %.3f ms\n\n" ~(str solution-fn) time-taken-ms#)
            (is (< time-taken-ms# 5000.0)))))))
 
 (euler 233168 solution-001 "Multiples of 3 and 5")
