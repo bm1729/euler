@@ -7,8 +7,10 @@
 
 (defn solution-014
   []
-  (->> (range 1 1000000)
-       (map (fn [n] [(collatz n) n]))
-       sort
-       last
-       second))
+  (let [x 1000000
+        half-x (/ x 2)]
+    (->> (range half-x x)
+         (map (fn [n] [(collatz n) n]))
+         sort
+         last
+         second)))
