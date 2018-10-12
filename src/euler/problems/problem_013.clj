@@ -107,4 +107,5 @@
        (reduce +)
        str
        (take 10)
-       (apply str)))
+       (apply str)
+       Long/parseLong))

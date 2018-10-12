@@ -13,7 +13,8 @@
              [problem-010 :refer :all]
              [problem-011 :refer :all]
              [problem-012 :refer :all]
-             [problem-013 :refer :all]]))
+             [problem-013 :refer :all]
+             [problem-014 :refer :all]]))
 
 (defmacro euler
   [expected solution-fn]
@@ -21,7 +22,7 @@
      (let [start-ns# (. java.lang.System (nanoTime))]
        (is (= ~expected (~solution-fn)))
        (let [time-taken-ns# (- (. java.lang.System (nanoTime)) start-ns#)
-             time-taken-ms# (/ time-taken-ns# 1000000.0)]
+             time-taken-ms# (/ time-taken-ns# 1000.0 1000.0)]
          (println ~(str solution-fn) time-taken-ms# "ms")
          (is (< time-taken-ms# 5000.0))))))
 
@@ -36,4 +37,5 @@
 (euler 31875000 solution-009)
 (euler 142913828922 solution-010)
 (euler 70600674 solution-011)
-(euler "5537376230" solution-013)
+(euler 5537376230 solution-013)
+(euler 837799 solution-014)

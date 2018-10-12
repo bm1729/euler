@@ -5,12 +5,14 @@
   [n]
   (let [n+1 (inc n)
         n-over-2 (/ n 2)]
-    (loop [s (transient (set (cons 2 (range 3 n+1 2))))
-           c 3]
-      (cond
-        (> c n-over-2) (persistent! s)
-        (s c) (recur (reduce disj! s (range (square c) n+1 c)) (inc c))
-        :else (recur s (inc c))))))
+    (persistent!
+      (reduce
+        (fn [sieve num]
+          (if (sieve num)
+            (reduce disj! sieve (range (square num) n+1 num))
+            sieve))
+        (transient (set (cons 2 (range 3 n+1 2))))
+        (range 3 n-over-2)))))
 
 (defn solution-010
   []
