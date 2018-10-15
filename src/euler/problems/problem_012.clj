@@ -1,11 +1,15 @@
 (ns euler.problems.problem-012
-  (:require [euler.utils :refer :all]))
+  (:require [euler.utils :refer :all]
+            [clojure.math.numeric-tower :as math]))
 
 (defn- factors-count
   [n]
-  (->> (range 1 (inc n))
-       (filter (partial divides? n))
-       count))
+  (let [[s _r] (math/exact-integer-sqrt n)]
+    (->> (range 1 (inc s))
+         (filter (partial divides? n))
+         (mapcat (fn [x] [x (/ n x)]))
+         distinct
+         count)))
 
 (defn- triangle-factors-count
   [n]
