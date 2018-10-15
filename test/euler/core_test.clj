@@ -16,15 +16,28 @@
              [problem-013 :refer :all]
              [problem-014 :refer :all]]))
 
+(def problem-times (atom nil))
+
+(defn setup
+  [f]
+  (reset! problem-times {})
+  (f)
+  (doseq [[problem-number time-taken] (reverse (sort-by second @problem-times))]
+    (printf "%s: %.3f ms\n\n" problem-number time-taken))
+  (printf "Total time taken: %.3f ms\n\n" (->> @problem-times (map second) (reduce +))))
+
+(use-fixtures :once setup)
+
 (defmacro euler
   [expected solution-fn description]
   `(deftest ~(symbol (str "testing-" solution-fn))
      (testing ~description
-       (let [start-ns# (. java.lang.System (nanoTime))]
+       (let [start-ns# (. java.lang.System (nanoTime))
+             problem-number# ~(str solution-fn)]
          (is (= ~expected (~solution-fn)))
          (let [time-taken-ns# (- (. java.lang.System (nanoTime)) start-ns#)
                time-taken-ms# (/ time-taken-ns# 1000.0 1000.0)]
-           (printf "%s: %.3f ms\n\n" ~(str solution-fn) time-taken-ms#)
+           (swap! problem-times #(assoc % problem-number# time-taken-ms#))
            (is (< time-taken-ms# 5000.0)))))))
 
 (euler 233168 solution-001 "Multiples of 3 and 5")
