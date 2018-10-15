@@ -38,5 +38,6 @@
 (euler 31875000 solution-009 "Special Pythagorean triplet")
 (euler 142913828922 solution-010 "Summation of primes")
 (euler 70600674 solution-011 "Largest product in a grid")
+(euler 76576500 solution-012 "Highly divisible triangular number")
 (euler 5537376230 solution-013 "Large sum")
 (euler 837799 solution-014 "Longest Collatz sequence")
