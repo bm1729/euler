@@ -22,9 +22,13 @@
   [f]
   (reset! problem-times {})
   (f)
-  (doseq [[problem-number time-taken] (reverse (sort-by second @problem-times))]
+  (doseq [[problem-number time-taken] (->> @problem-times
+                                           (sort-by second)
+                                           reverse)]
     (printf "%s: %.3f ms\n\n" problem-number time-taken))
-  (printf "Total time taken: %.3f ms\n\n" (->> @problem-times (map second) (reduce +))))
+  (printf "Total time taken: %.3f ms\n\n" (->> @problem-times
+                                               (map second)
+                                               (reduce +))))
 
 (use-fixtures :once setup)
 
