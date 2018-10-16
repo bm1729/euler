@@ -16,7 +16,8 @@
              [problem-013 :refer :all]
              [problem-014 :refer :all]
              [problem-015 :refer :all]
-             [problem-016 :refer :all]]))
+             [problem-016 :refer :all]
+             [problem-018 :refer :all]]))
 
 (def problem-times (atom nil))
 
@@ -62,3 +63,4 @@
 (euler 837799 solution-014 "Longest Collatz sequence")
 (euler 137846528820 solution-015 "Lattice paths")
 (euler 1366 solution-016 "Power digit sum")
+(euler 1074 solution-018 "Maximum path sum I")
