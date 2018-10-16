@@ -1,24 +1,12 @@
 (ns euler.problems.problem-012
-  (:require [euler.utils :refer :all]
-            [clojure.math.numeric-tower :as math]))
-
-(defn- factors-count
-  [n]
-  (let [[s _r] (math/exact-integer-sqrt n)]
-    (->> (range 1 (inc s))
-         (filter (partial divides? n))
-         (mapcat (fn [x]
-                   (if (= n (* x x))
-                     [x]
-                     [x (/ n x)])))
-         count)))
+  (:require [euler.utils :refer :all]))
 
 (defn- triangular-number-factors-count
   [n]
   (let [[a b] (if (even? n)
                 [(/ n 2) (inc n)]
                 [(/ (inc n) 2) n])]
-    (* (factors-count a) (factors-count b))))
+    (* (count (factors a)) (count (factors b)))))
 
 (defn- triangular-number
   [n]

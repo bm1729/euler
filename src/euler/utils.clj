@@ -1,4 +1,5 @@
-(ns euler.utils)
+(ns euler.utils
+  (:require [clojure.math.numeric-tower :as math]))
 
 (defn divides?
   [num div]
@@ -23,3 +24,14 @@
        (map #(str %))
        (map #(Integer/parseInt %))
        (reduce +)))
+
+(defn factors
+  "Returns list of unordered factors of n (including 1)"
+  [n]
+  (let [[s _r] (math/exact-integer-sqrt n)]
+    (->> (range 1 (inc s))
+         (filter (partial divides? n))
+         (mapcat (fn [x]
+                   (if (= n (* x x))
+                     [x]
+                     [x (/ n x)]))))))
