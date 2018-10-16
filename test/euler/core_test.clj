@@ -14,7 +14,9 @@
              [problem-011 :refer :all]
              [problem-012 :refer :all]
              [problem-013 :refer :all]
-             [problem-014 :refer :all]]))
+             [problem-014 :refer :all]
+             [problem-015 :refer :all]
+             [problem-016 :refer :all]]))
 
 (def problem-times (atom nil))
 
@@ -58,3 +60,5 @@
 (euler 76576500 solution-012 "Highly divisible triangular number")
 (euler 5537376230 solution-013 "Large sum")
 (euler 837799 solution-014 "Longest Collatz sequence")
+(euler 137846528820 solution-015 "Lattice paths")
+(euler 1366 solution-016 "Power digit sum")
