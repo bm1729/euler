@@ -1,8 +1,5 @@
-(ns euler.problems.problem-015)
-
-(defn factorial
-  [n]
-  (reduce * (range 1N (inc n))))
+(ns euler.problems.problem-015
+  (:require [euler.utils :refer :all]))
 
 (defn solution-015
   []

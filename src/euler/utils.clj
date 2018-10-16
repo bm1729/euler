@@ -11,3 +11,7 @@
 (defn square
   [n]
   (* n n))
+
+(defn factorial
+  [n]
+  (reduce * (range 1N (inc n))))
