@@ -6,7 +6,7 @@
 
 (defn power
   [x n]
-  (reduce * (repeat n x)))
+  (reduce * 1N (repeat n x)))
 
 (defn square
   [n]
@@ -15,3 +15,11 @@
 (defn factorial
   [n]
   (reduce * (range 1N (inc n))))
+
+(defn sum-digits
+  [n]
+  (->> n
+       str
+       (map #(str %))
+       (map #(Integer/parseInt %))
+       (reduce +)))

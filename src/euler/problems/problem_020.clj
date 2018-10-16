@@ -3,8 +3,4 @@
 
 (defn solution-020
   []
-  (->> (factorial 100)
-       str
-       (map #(str %))
-       (map #(Integer/parseInt %))
-       (reduce +)))
+  (sum-digits (factorial 100)))

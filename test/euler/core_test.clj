@@ -46,7 +46,7 @@
          (let [time-taken-ns# (- (. java.lang.System (nanoTime)) start-ns#)
                time-taken-ms# (/ time-taken-ns# 1000.0 1000.0)]
            (swap! problem-times #(assoc % problem-number# time-taken-ms#))
-           (is (< time-taken-ms# 5000.0)))))))
+           (is (< time-taken-ms# 10000.0)))))))
 
 (euler 233168 solution-001 "Multiples of 3 and 5")
 (euler 4613732 solution-002 "Even Fibonacci numbers")
