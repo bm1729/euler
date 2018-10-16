@@ -2,9 +2,7 @@
 
 (defn- power-of-2
   [n]
-  (if (zero? n)
-    1N
-    (* 2 (power-of-2 (dec n)))))
+  (reduce * 1N (repeat n 2)))
 
 (defn solution-016
   []
