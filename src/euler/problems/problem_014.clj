@@ -12,6 +12,6 @@
   []
   (->> (range 500000 1000000)
        (remove #(= 1 (quot % 3)))
-       (map (fn [n] [(collatz-seq-length n) n]))
+       (pmap (fn [n] [(collatz-seq-length n) n]))
        (reduce (partial max-key first))
        second))
