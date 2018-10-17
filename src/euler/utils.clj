@@ -21,12 +21,12 @@
   [n]
   (->> n
        str
-       (map #(str %))
+       (map str)
        (map #(Integer/parseInt %))
        (reduce +)))
 
 (defn factors
-  "Returns list of unordered factors of n (including 1)"
+  "Returns list of unordered factors of n (including 1 and n)"
   [n]
   (let [[s _r] (math/exact-integer-sqrt n)]
     (->> (range 1 (inc s))
