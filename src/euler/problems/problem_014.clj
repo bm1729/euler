@@ -1,6 +1,6 @@
 (ns euler.problems.problem-014)
 
-(defn- collatz
+(defn- collatz-seq-length
   [n]
   (loop [x n
          c 1]
@@ -11,7 +11,9 @@
 (defn solution-014
   []
   (->> (range 500000 1000000)
-       (map (fn [n] [(collatz n) n]))
-       sort
-       last
+       (map (fn [n] [(collatz-seq-length n) n]))
+       (reduce (fn [[best-length :as best] [this-length :as x]]
+                 (if (< best-length this-length)
+                   x
+                   best)))
        second))
