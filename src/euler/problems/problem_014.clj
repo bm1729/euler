@@ -11,9 +11,7 @@
 (defn solution-014
   []
   (->> (range 500000 1000000)
+       (remove #(= 1 (quot % 3)))
        (map (fn [n] [(collatz-seq-length n) n]))
-       (reduce (fn [[best-length :as best] [this-length :as x]]
-                 (if (< best-length this-length)
-                   x
-                   best)))
+       (reduce (partial max-key first))
        second))
