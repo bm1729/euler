@@ -14,10 +14,6 @@
         (transient (set (cons 2 (range 3 n+1 2))))
         (range 3 n-over-2)))))
 
-(defn sieve
-  [n]
-  )
-
 (defn solution-010
   []
   (reduce + (sieve-of-eratosthenes 2000000)))
