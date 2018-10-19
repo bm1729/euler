@@ -20,6 +20,7 @@
              [problem-018 :refer :all]
              [problem-020 :refer :all]
              [problem-021 :refer :all]
+             [problem-022 :refer :all]
              [problem-023 :refer :all]]))
 
 (def problem-times (atom nil))
@@ -69,4 +70,5 @@
 (euler 1074 solution-018 "Maximum path sum I")
 (euler 648 solution-020 "Factorial digit sum")
 (euler 31626 solution-021 "Amicable numbers")
+(euler 871198282 solution-022 "Names scores")
 (euler 4179871 solution-023 "Non-abundant sums")
