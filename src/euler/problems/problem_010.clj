@@ -9,10 +9,14 @@
       (reduce
         (fn [sieve num]
           (if (sieve num)
-            (reduce disj! sieve (range (square num) n+1 num))
+            (reduce disj! sieve (range (* 2 num) n+1 num))
             sieve))
         (transient (set (cons 2 (range 3 n+1 2))))
         (range 3 n-over-2)))))
+
+(defn sieve
+  [n]
+  )
 
 (defn solution-010
   []
