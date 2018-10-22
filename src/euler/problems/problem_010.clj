@@ -1,10 +1,11 @@
 (ns euler.problems.problem-010
-  (:require [euler.utils :refer :all]))
+  (:require [euler.utils :refer :all]
+            [clojure.math.numeric-tower :as math]))
 
 (defn- sieve-of-eratosthenes
   [n]
   (let [n+1 (inc n)
-        n-over-2 (/ n 2)]
+        [sqrt-n _r] (math/exact-integer-sqrt n+1)]
     (persistent!
       (reduce
         (fn [sieve num]
@@ -12,7 +13,7 @@
             (reduce disj! sieve (range (* 2 num) n+1 num))
             sieve))
         (transient (set (cons 2 (range 3 n+1 2))))
-        (range 3 n-over-2)))))
+        (range 3 sqrt-n)))))
 
 (defn solution-010
   []
