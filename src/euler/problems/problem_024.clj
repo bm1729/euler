@@ -16,9 +16,6 @@
 
 (defn solution-024
   []
-  (->> (list-of-digits (vec (range 10)) (dec 1000000))
-       (map str)
-       clojure.string/join
-       Long/parseLong))
+  (compose-number (list-of-digits (vec (range 10)) (dec 1000000))))
 
 

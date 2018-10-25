@@ -3,4 +3,4 @@
 
 (defn solution-016
   []
-  (sum-digits (power 2 1000)))
+  (reduce + (decompose-number (power 2 1000))))

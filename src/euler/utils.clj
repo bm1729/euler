@@ -9,21 +9,9 @@
   [x n]
   (reduce * 1N (repeat n x)))
 
-(defn square
-  [n]
-  (* n n))
-
 (defn factorial
   [n]
   (reduce * (range 1N (inc n))))
-
-(defn sum-digits
-  [n]
-  (->> n
-       str
-       (map str)
-       (map #(Integer/parseInt %))
-       (reduce +)))
 
 (defn factors
   "Returns list of unordered factors of n (including 1 and n)"
@@ -35,3 +23,14 @@
                    (if (= n (* x x))
                      [x]
                      [x (/ n x)]))))))
+
+(defn decompose-number
+  [n]
+  (->> n
+       str
+       (map str)
+       (map #(Integer/parseInt %))))
+
+(defn compose-number
+  [digits]
+  (reduce #(+ %2 (* 10 %1)) digits))
