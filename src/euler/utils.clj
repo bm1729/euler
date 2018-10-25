@@ -42,3 +42,11 @@
 (defn sum-of-digits
   [n]
   (reduce + (decompose-number n)))
+
+(defn fibonacci-sequence
+  ([]
+   (fibonacci-sequence 0 1))
+  ([x y]
+   ((fn fib [a b]
+      (lazy-seq (cons a (fib b (+ a b)))))
+     x y)))

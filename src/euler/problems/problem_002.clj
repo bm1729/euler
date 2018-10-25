@@ -1,12 +1,9 @@
-(ns euler.problems.problem-002)
-
-(def ^:private fibonnaci-seq ((fn fib [a b]
-                                (lazy-seq (cons a (fib b (+ a b)))))
-                               0 1))
+(ns euler.problems.problem-002
+  (:require [euler.utils :refer :all]))
 
 (defn solution-002
   []
-  (->> fibonnaci-seq
+  (->> (fibonacci-sequence)
        (take-while #(< % 4000000))
        (filter even?)
        (reduce +)))
