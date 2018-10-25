@@ -3,4 +3,4 @@
 
 (defn solution-020
   []
-  (reduce + (decompose-number (factorial 100))))
+  (sum-of-digits (factorial 100)))

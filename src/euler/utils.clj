@@ -9,6 +9,10 @@
   [x n]
   (reduce * 1N (repeat n x)))
 
+(defn square
+  [n]
+  (* n n))
+
 (defn factorial
   [n]
   (reduce * (range 1N (inc n))))
@@ -20,7 +24,7 @@
     (->> (range 1 (inc s))
          (filter (partial divides? n))
          (mapcat (fn [x]
-                   (if (= n (* x x))
+                   (if (= n (square x))
                      [x]
                      [x (/ n x)]))))))
 
@@ -34,3 +38,7 @@
 (defn compose-number
   [digits]
   (reduce #(+ %2 (* 10 %1)) digits))
+
+(defn sum-of-digits
+  [n]
+  (reduce + (decompose-number n)))
