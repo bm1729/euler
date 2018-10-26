@@ -26,6 +26,7 @@
              [problem-023 :refer :all]
              [problem-024 :refer :all]
              [problem-025 :refer :all]
+             [problem-026 :refer :all]
              [problem-028 :refer :all]
              [problem-029 :refer :all]]))
 
@@ -82,5 +83,6 @@
 (euler 4179871 solution-023 "Non-abundant sums")
 (euler 2783915460 solution-024 "Lexicographic permutations")
 (euler 4782 solution-025 "1000-digit Fibonacci number")
+(euler 983 solution-026 "Reciprocal cycles")
 (euler 669171001 solution-028 "Number spiral diagonals")
 (euler 9183 solution-029 "Distinct powers")

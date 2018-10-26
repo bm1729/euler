@@ -64,3 +64,8 @@
 
 (deftest fibonacci-sequence
   (is (= [0 1 1 2 3 5 8 13 21 34] (take 10 (target/fibonacci-sequence)))))
+
+(deftest max-by
+  (is (= "seventeen" (target/max-by count ["one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten"
+                                           "eleven" "twelve" "thirteen" "fourteen" "fifteen" "sixteen" "seventeen"
+                                           "eighteen" "nineteen" "twenty"]))))

@@ -54,3 +54,10 @@
    ((fn fib [a b]
       (lazy-seq (cons a (fib b (+' a b)))))
      x y)))
+
+(defn max-by
+  [f coll]
+  (->> coll
+       (map (fn [x] [(f x) x]))
+       (reduce (partial max-key first))
+       second))

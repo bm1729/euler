@@ -1,4 +1,5 @@
-(ns euler.problems.problem-014)
+(ns euler.problems.problem-014
+  (:require [euler.utils :refer :all]))
 
 (defn- collatz-seq-length
   [n]
@@ -10,8 +11,4 @@
 
 (defn solution-014
   []
-  (->> (range 500000 1000000)
-       (remove #(= 1 (quot % 3)))
-       (pmap (fn [n] [(collatz-seq-length n) n]))
-       (reduce (partial max-key first))
-       second))
+  (max-by collatz-seq-length (range 500000 1000000)))
