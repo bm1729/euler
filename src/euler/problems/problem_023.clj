@@ -2,7 +2,7 @@
   (:require [euler.utils :refer :all]
             [clojure.set :as set]))
 
-(defn abundant?
+(defn- abundant?
   [n]
   (< (+ n n) (reduce + (factors n))))
 

@@ -12,7 +12,7 @@
 (defn- days-of-month-for-year
   [year]
   (let [february (if (leap? year) (days-of-month 29) (days-of-month 28))]
-    (concat (days-of-month-for-year 31)
+    (concat (days-of-month 31)
             february
             (days-of-month 31)
             (days-of-month 30)

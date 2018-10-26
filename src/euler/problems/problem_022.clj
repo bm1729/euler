@@ -5,7 +5,7 @@
   [name]
   (reduce + (map (zipmap "ABCDEFGHIJKLMNOPQRSTUVWXYZ" (iterate inc 1)) name)))
 
-(defn read-file
+(defn- read-file
   []
   (map #(str/replace % #"\"" "") (str/split (slurp "resources/p022_names.txt") #"\,")))
 
