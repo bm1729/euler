@@ -19,6 +19,7 @@
              [problem-016 :refer :all]
              [problem-017 :refer :all]
              [problem-018 :refer :all]
+             [problem-019 :refer :all]
              [problem-020 :refer :all]
              [problem-021 :refer :all]
              [problem-022 :refer :all]
@@ -72,6 +73,7 @@
 (euler 1366 solution-016 "Power digit sum")
 (euler 21124 solution-017 "Number letter counts")
 (euler 1074 solution-018 "Maximum path sum I")
+(euler 171 solution-019 "Counting Sundays")
 (euler 648 solution-020 "Factorial digit sum")
 (euler 31626 solution-021 "Amicable numbers")
 (euler 871198282 solution-022 "Names scores")
