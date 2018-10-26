@@ -50,8 +50,12 @@
   (is (= #{1} (into #{} (target/factors 1))))
   (is (= #{1 2} (into #{} (target/factors 2))))
   (is (= #{1 3 9} (into #{} (target/factors 9))))
-  (is (= #{1 2 4 7 14 28} (into #{} (target/factors 28))))
-  )
+  (is (= #{1 2 4 7 14 28} (into #{} (target/factors 28)))))
+
+(deftest number-of-digits
+  (is (= 1 (target/number-of-digits 1)))
+  (is (= 2 (target/number-of-digits 10)))
+  (is (= 7 (target/number-of-digits 1000000))))
 
 (deftest sum-of-digits
   (is (= 0 (target/sum-of-digits 0)))

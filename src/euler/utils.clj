@@ -39,6 +39,10 @@
   [digits]
   (reduce #(+ %2 (* 10 %1)) digits))
 
+(defn number-of-digits
+  [n]
+  (count (str n)))
+
 (defn sum-of-digits
   [n]
   (reduce + (decompose-number n)))

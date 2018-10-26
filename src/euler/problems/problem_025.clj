@@ -15,7 +15,7 @@
 (defn solution-025
   []
   (->> (fibonacci-sequence 1 1)
-       (map #(count (decompose-number %)))
+       (map number-of-digits)
        (map vector (iterate inc 1))
        (filter (fn [[_index digits-count ]] (= 1000 digits-count)))
        ffirst))
