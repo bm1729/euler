@@ -48,5 +48,5 @@
    (fibonacci-sequence 0 1))
   ([x y]
    ((fn fib [a b]
-      (lazy-seq (cons a (fib b (+ a b)))))
+      (lazy-seq (cons a (fib b (+' a b)))))
      x y)))
