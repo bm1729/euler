@@ -8,4 +8,5 @@
                  [org.clojure/test.check "0.9.0"]]
   :main ^:skip-aot euler.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}}
+  :monkeypatch-clojure-test false)

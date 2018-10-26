@@ -1,5 +1,6 @@
 (ns euler.problems.problem-023
-  (:require [euler.utils :refer :all]))
+  (:require [euler.utils :refer :all]
+            [clojure.set :as set]))
 
 (defn abundant?
   [n]
@@ -13,4 +14,4 @@
                                       :when (>= x y)
                                       :when (> 28124 (+ x y))]
                                   (+ x y)))]
-    (reduce + (clojure.set/difference (into #{} (range 1 28124)) abundant-sums))))
+    (reduce + (set/difference (into #{} (range 1 28124)) abundant-sums))))
