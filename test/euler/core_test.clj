@@ -17,6 +17,7 @@
              [problem-014 :refer :all]
              [problem-015 :refer :all]
              [problem-016 :refer :all]
+             [problem-017 :refer :all]
              [problem-018 :refer :all]
              [problem-020 :refer :all]
              [problem-021 :refer :all]
@@ -69,6 +70,7 @@
 (euler 837799 solution-014 "Longest Collatz sequence")
 (euler 137846528820 solution-015 "Lattice paths")
 (euler 1366 solution-016 "Power digit sum")
+(euler 21124 solution-017 "Number letter counts")
 (euler 1074 solution-018 "Maximum path sum I")
 (euler 648 solution-020 "Factorial digit sum")
 (euler 31626 solution-021 "Amicable numbers")
