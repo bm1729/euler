@@ -7,15 +7,15 @@
 
 (defn power
   [x n]
-  (reduce * 1N (repeat n x)))
+  (reduce *' 1 (repeat n x)))
 
 (defn square
   [n]
-  (* n n))
+  (*' n n))
 
 (defn factorial
   [n]
-  (reduce * (range 1N (inc n))))
+  (reduce *' (range 1 (inc n))))
 
 (defn factors
   "Returns list of unordered factors of n (including 1 and n)"
