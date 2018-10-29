@@ -61,3 +61,24 @@
        (map (fn [x] [(f x) x]))
        (reduce (partial max-key first))
        second))
+
+(defn primes
+  [n]
+  (let [bs (new java.util.BitSet n)
+        [s _r] (math/exact-integer-sqrt n)]
+    (.flip bs 2 n)
+    (doseq [x (range 2 (inc s))]
+      (if (.get bs x)
+        (doseq [m (range (* 2 x) n x)]
+          (.clear bs m))))
+    (loop [primes (transient [])
+           bit 1]
+      (let [next-set-bit (.nextSetBit bs bit)]
+        (if (= -1 next-set-bit)
+          (persistent! primes)
+          (recur (conj! primes next-set-bit) (inc next-set-bit)))))))
+
+(defn prime?
+  [n]
+  (not (let [[s _r] (math/exact-integer-sqrt n)]
+         (some (partial divides? n) (range 2 (inc s))))))
