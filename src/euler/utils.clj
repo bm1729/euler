@@ -80,5 +80,7 @@
 
 (defn prime?
   [n]
-  (not (let [[s _r] (math/exact-integer-sqrt n)]
-         (some (partial divides? n) (range 2 (inc s))))))
+  (if (< n 2)
+    false
+    (not (let [[s _r] (math/exact-integer-sqrt n)]
+           (some (partial divides? n) (range 2 (inc s)))))))

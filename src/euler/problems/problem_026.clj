@@ -4,11 +4,12 @@
 (defn reciprocal-cycle-length
   [d]
   (loop [n 10
-         remainders []]
+         remainders-set #{}
+         remainders-list ()]
     (let [remainder (rem n d)]
       (cond (zero? remainder) 0
-            (seq (filter #(= remainder %) remainders)) (inc (.indexOf (reverse remainders) remainder))
-            :else (recur (* 10 remainder) (conj remainders remainder))))))
+            (remainders-set remainder) (.indexOf remainders-list remainder)
+            :else (recur (* 10 remainder) (conj remainders-set remainder) (conj remainders-list remainder))))))
 
 (defn solution-026
   []
