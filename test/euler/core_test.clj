@@ -30,7 +30,9 @@
              [problem-027 :refer :all]
              [problem-028 :refer :all]
              [problem-029 :refer :all]
-             [problem-030 :refer :all]]))
+             [problem-030 :refer :all]
+             [problem-031 :refer :all]
+             [problem-032 :refer :all]]))
 
 (def problem-times (atom nil))
 
@@ -90,3 +92,5 @@
 (euler 669171001 solution-028 "Number spiral diagonals")
 (euler 9183 solution-029 "Distinct powers")
 (euler 443839 solution-030 "Digit fifth powers")
+(euler 73682 solution-031 "Coin sums")
+(euler 73682 solution-032 "Pandigital products")
