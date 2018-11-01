@@ -93,4 +93,4 @@
 (euler 9183 solution-029 "Distinct powers")
 (euler 443839 solution-030 "Digit fifth powers")
 (euler 73682 solution-031 "Coin sums")
-(euler 73682 solution-032 "Pandigital products")
+(euler 45228 solution-032 "Pandigital products")
