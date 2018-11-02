@@ -32,7 +32,8 @@
              [problem-029 :refer :all]
              [problem-030 :refer :all]
              [problem-031 :refer :all]
-             [problem-032 :refer :all]]))
+             [problem-032 :refer :all]
+             [problem-033 :refer :all]]))
 
 (def problem-times (atom nil))
 
@@ -94,3 +95,4 @@
 (euler 443839 solution-030 "Digit fifth powers")
 (euler 73682 solution-031 "Coin sums")
 (euler 45228 solution-032 "Pandigital products")
+(euler 100 solution-033 "Digit cancelling fractions")
