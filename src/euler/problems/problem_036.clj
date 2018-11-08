@@ -1,7 +1,7 @@
 (ns euler.problems.problem-036
   (:require [euler.utils :refer :all]))
 
-(defn palindromic?
+(defn- palindromic?
   [base n]
   (let [digits (decompose-number base n)]
     (= digits (reverse digits))))

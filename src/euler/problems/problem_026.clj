@@ -1,7 +1,7 @@
 (ns euler.problems.problem-026
   (:require [euler.utils :refer :all]))
 
-(defn reciprocal-cycle-length
+(defn- reciprocal-cycle-length
   [d]
   (loop [n 10
          remainders-set #{}

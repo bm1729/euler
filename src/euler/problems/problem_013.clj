@@ -1,4 +1,5 @@
-(ns euler.problems.problem-013)
+(ns euler.problems.problem-013
+  (:require [euler.utils :refer :all]))
 
 (def ^:private x [37107287533902102798797998220837590246510135740250
                   46376937677490009712648124896970078050417018260538
@@ -105,7 +106,6 @@
   []
   (->> x
        (reduce +)
-       str
+       decompose-number
        (take 10)
-       (apply str)
-       Long/parseLong))
+       compose-number))
