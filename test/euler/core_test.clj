@@ -38,7 +38,8 @@
              [problem-035 :refer :all]
              [problem-036 :refer :all]
              [problem-037 :refer :all]
-             [problem-038 :refer :all]]))
+             [problem-038 :refer :all]
+             [problem-039 :refer :all]]))
 
 (def problem-times (atom nil))
 
@@ -106,3 +107,4 @@
 (euler 872187 solution-036 "Double-base palindromes")
 (euler 748317 solution-037 "Truncatable primes")
 (euler 932718654 solution-038 "Pandigital multiples")
+(euler 840 solution-039 "Integer right triangles")

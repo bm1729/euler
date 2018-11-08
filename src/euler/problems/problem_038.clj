@@ -7,7 +7,7 @@
        (apply distinct? digits)
        (every? (into #{} (range 1 10)) digits)))
 
-(defn pandigital-products
+(defn- pandigital-products
   [n]
   (loop [digits []
          [x & r] (iterate inc 1)]

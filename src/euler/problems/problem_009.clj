@@ -2,9 +2,9 @@
 
 (defn solution-009
   []
-  (loop [a 1
-         b 1]
-    (let [c (- 1000 a b)]
-      (cond (= (* c c) (+ (* a a) (* b b))) (* a b c)
-            (< b 1000) (recur a (inc b))
-            :else (recur (inc a) (inc a))))))
+  (first (for [a (range 1 (/ 1000 2))
+               b (range 1 (min a (- 1000 a)))
+               :let [c (- 1000 a b)]
+               :when (not= a b)
+               :when (= (* c c) (+ (* a a) (* b b)))]
+           (* a b c))))
