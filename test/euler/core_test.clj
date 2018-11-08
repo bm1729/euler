@@ -33,7 +33,9 @@
              [problem-030 :refer :all]
              [problem-031 :refer :all]
              [problem-032 :refer :all]
-             [problem-033 :refer :all]]))
+             [problem-033 :refer :all]
+             [problem-034 :refer :all]
+             [problem-035 :refer :all]]))
 
 (def problem-times (atom nil))
 
@@ -96,3 +98,5 @@
 (euler 73682 solution-031 "Coin sums")
 (euler 45228 solution-032 "Pandigital products")
 (euler 100 solution-033 "Digit cancelling fractions")
+(euler 321 solution-034 "Digit factorials")
+(euler 55 solution-035 "Circular primes")
