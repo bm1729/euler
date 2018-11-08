@@ -35,7 +35,8 @@
              [problem-032 :refer :all]
              [problem-033 :refer :all]
              [problem-034 :refer :all]
-             [problem-035 :refer :all]]))
+             [problem-035 :refer :all]
+             [problem-036 :refer :all]]))
 
 (def problem-times (atom nil))
 
@@ -100,3 +101,4 @@
 (euler 100 solution-033 "Digit cancelling fractions")
 (euler 40730 solution-034 "Digit factorials")
 (euler 55 solution-035 "Circular primes")
+(euler 872187 solution-036 "Double-base palindromes")

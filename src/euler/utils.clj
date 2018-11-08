@@ -29,15 +29,20 @@
                      [x (/ n x)]))))))
 
 (defn decompose-number
-  [n]
-  (->> n
-       str
-       (map str)
-       (map #(Integer/parseInt %))))
+  ([n]
+    (decompose-number 10 n))
+  ([base n]
+   (loop [agg ()
+          n n]
+     (if (< n base)
+       (conj agg (rem n base))
+       (recur (conj agg (rem n base)) (quot n base))))))
 
 (defn compose-number
-  [digits]
-  (reduce #(+ %2 (* 10 %1)) digits))
+  ([digits]
+    (compose-number 10 digits))
+  ([base digits]
+   (reduce #(+ %2 (* base %1)) digits)))
 
 (defn number-of-digits
   [n]
