@@ -39,7 +39,8 @@
              [problem-036 :refer :all]
              [problem-037 :refer :all]
              [problem-038 :refer :all]
-             [problem-039 :refer :all]]))
+             [problem-039 :refer :all]
+             [problem-040 :refer :all]]))
 
 (def problem-times (atom nil))
 
@@ -108,3 +109,4 @@
 (euler 748317 solution-037 "Truncatable primes")
 (euler 932718654 solution-038 "Pandigital multiples")
 (euler 840 solution-039 "Integer right triangles")
+(euler 210 solution-040 "Champernowne's constant")
