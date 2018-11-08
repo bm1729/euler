@@ -20,8 +20,7 @@
   []
   (let [ps (primes 1000000)
         prime-set (into #{} ps)]
-    (loop [truncatable-primes []
-           [c & r] (drop 4 ps)]
-      (cond (= 11 (count truncatable-primes)) (reduce + truncatable-primes)
-            (truncatable-prime? prime-set c) (recur (conj truncatable-primes c) r)
-            :else (recur truncatable-primes r)))))
+    (->> (drop 4 ps)
+         (filter (partial truncatable-prime? prime-set))
+         (take 11)
+         (reduce +))))
