@@ -98,5 +98,5 @@
 (euler 73682 solution-031 "Coin sums")
 (euler 45228 solution-032 "Pandigital products")
 (euler 100 solution-033 "Digit cancelling fractions")
-(euler 321 solution-034 "Digit factorials")
+(euler 40730 solution-034 "Digit factorials")
 (euler 55 solution-035 "Circular primes")
